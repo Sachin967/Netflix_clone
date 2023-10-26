@@ -1,0 +1,57 @@
+.row {
+  margin-left: 20px;
+  color: #fff;
+}
+.row-poster {
+  display: flex;
+  padding: 20px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.row-poster::-webkit-scrollbar {
+  display: none;
+}
+.poster {
+  max-height: 250px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.smallposter {
+  max-height: 150px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.smallposter:hover {
+  transform: scale(1.2);
+}
+.poster:hover {
+  transform: scale(1.1);
+}
+.poster-container {
+  position: relative; /* Position relative for absolute child */
+  margin-right: 10px; /* Add spacing between containers if desired */
+}
+
+.movie-info {
+  display: none; /* Hide the movie name and background by default */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s; /* Add a smooth transition effect */
+}
+
+.poster-container:hover .movie-info {
+  opacity: 1; /* Show the movie name and background on hover */
+}
+
+
